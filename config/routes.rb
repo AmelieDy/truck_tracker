@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   root to: 'trucks#index'
 
   resources :trucks
-  get '/search' => 'trucks#search'
 end
