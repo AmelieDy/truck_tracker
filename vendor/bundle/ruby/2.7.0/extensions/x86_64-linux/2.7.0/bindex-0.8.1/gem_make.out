@@ -1,0 +1,15 @@
+current directory: /home/amelie/Documents/projects/truck_tracker/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/home/amelie/.rbenv/versions/2.7.0/bin/ruby -I /home/amelie/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20201113-9813-14hgjoh.rb extconf.rb
+creating Makefile
+
+current directory: /home/amelie/Documents/projects/truck_tracker/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/amelie/Documents/projects/truck_tracker/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/amelie/Documents/projects/truck_tracker/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20201113-9813-fh3l3x/skiptrace/internal
