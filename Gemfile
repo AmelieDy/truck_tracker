@@ -29,9 +29,14 @@ gem 'jbuilder', '~> 2.7'
 # gem 'excon'
 # env variables
 gem 'dotenv-rails'
-
 # haml
 gem 'haml'
+# Use SCSS for stylesheets
+gem 'sass-rails', '>= 6'
+# elasticsearch service
+gem 'searchkick'
+# generate random image
+gem 'image_suckr'
 
 
 # Reduces boot times through caching; required in config/boot.rb

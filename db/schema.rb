@@ -14,15 +14,19 @@ ActiveRecord::Schema.define(version: 2020_11_13_154140) do
 
   create_table "trucks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.integer "category"
+    t.string "category"
     t.string "city"
     t.string "zip_code"
     t.string "street_address"
     t.string "country"
     t.text "description"
+    t.string "image"
     t.boolean "saved", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["category"], name: "index_trucks_on_category"
+    t.index ["name"], name: "index_trucks_on_name"
+    t.index ["street_address"], name: "index_trucks_on_street_address"
   end
 
 end

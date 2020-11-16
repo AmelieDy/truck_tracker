@@ -1,4 +1,40 @@
-%h1 coucou
+#home
+  .image-home
+  .layer
+  .container
+    .row
+      .col-lg-12
+        .presentation
+          .home-content
+            %h1 Truck Tracker
+            %p Réserve ton truck partout à Bordeaux !
+          -# .row
+          -#   .col-lg-12
+          -#     %a.btn.btn-theme.wow.fadeInLeft{href: '#contact', 'data-wow-offset': 0} CONTACT
+          -#     = link_to "TÉLÉCHARGER CV", download_pdf_path, target: '_blank', class: 'btn btn-theme wow fadeInRight'
 
-- @trucks.each do |truck|
-  %p= truck.name
+-# - @categories.each do |category|
+-#   %p= category.category
+-#   %h2= category.count
+.container-fluid
+  .row
+    .col-md-12
+      %h2.mt-4 De quoi avez-vous envie ? 
+      %ul
+        - @categories.count.each do |cat, count|
+          %li.button-box
+            -# %p
+            -#   = check_box_tag "categories[]", cat, false ,class: 'check'
+            -#   = "#{cat} #{count}"
+
+            = link_to "#{cat} #{count}",'#',"data-turbolinks": "false", class:'mt-2 btn btn-outline-primary button-box', 'data-category': cat
+      -# .input-group
+      -#   = check_box_tag 'check_all'
+      -#   = label :check_all, "Tout sélectionner"
+
+      -# %br
+      -# .input-group
+      -#   %button{id:'submit_leads', "data-target" => "#modalConfirm", "data-toggle" => "modal", :type => "button", title: 'Confirmer la requête', class: 'btn btn-success'}
+      -#     LET'S GO
+  #trucks_list
+    = render 'trucks_list', trucks: @trucks

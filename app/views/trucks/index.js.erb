@@ -1,0 +1,3 @@
+// Render index/main_page when click on button in panel left
+$("#trucks_list").empty();
+$("#trucks_list").append("<%= j render(:partial => 'trucks_list', :locals => {trucks: @trucks}) %>");

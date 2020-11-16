@@ -7,11 +7,30 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("jquery")
 
+$(document).ready(function() {
 
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
+  // function to get trucks with category params
+  $('.button-box a').on('click', function(e){
+    e.preventDefault();
+    // select button element
+    const selector = 'ul li.button-box a';
+    // remove and add classes
+    $(selector).removeClass('btn-primary');
+    $(selector).addClass('btn-outline-primary');
+    $(this).addClass('btn-primary');
+    $(this).removeClass('btn-outline-primary');
+    // set category variable
+    category = $(this).data('category');
+    // get trucks in trucks controller index in ajax
+    $.ajax({
+      type: 'GET',
+      url: '/trucks/',
+      data: {
+        'category': category
+      },
+      datatype: 'json',
+    });
+  });
+});

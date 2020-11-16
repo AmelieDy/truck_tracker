@@ -1,0 +1,104 @@
+/*
+*= require_self
+*= require bootstrap
+*/
+
+:root {
+   --linear-bg: linear-gradient(to bottom left,rgba(47,47,237,0.7),rgba(47,47,237,0.9)) ;
+   --theme-color: #5050EA;
+ }
+
+ html {
+   font-family: 'Open Sans', sans-serif;
+
+ }
+ #home {
+   position: relative;
+   height: 40vh;
+   overflow: hidden;
+ }
+
+ .image-home {
+   position: absolute;
+   background: image-url("home.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100%;
+   width: 100%;
+   top:0;
+   left: 0;
+ }
+
+
+ /* description */
+ #home .container {
+   position: relative;
+   top: 40%;
+   // transform: translateY(-50%);
+   color: #FFF !important;
+   text-align: center;
+   width: 100%;
+ }
+
+ h1 {
+   font-family: 'Pacifico', cursive;
+   font-size: 6em !important;
+   margin-bottom: 20px;
+
+ }
+
+ #home p {
+   margin-bottom: 60px;
+ }
+
+ .layer {
+   background: var(--linear-bg) !important;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+ }
+ ul {
+   padding-left: 0;
+ }
+
+ li {
+   text-decoration: none;
+   display: inline;
+ }
+
+ .container-fluid {
+   padding: 20px 80px !important;
+ }
+
+.btn-primary,
+.btn-outline-primary:hover {
+  background-color: var(--theme-color) !important;
+  border-color: var(--theme-color) !important;
+}
+
+.card-text {
+   color: #99999b;
+ }
+
+.card {
+  height: 500px;
+}
+
+.card-category {
+  color: var(--theme-color);
+}
+
+.book-button {
+  position: absolute;
+  bottom: 20px;
+}
+
+ @media(max-width: 767px){
+   .ml span {
+     display: block;
+     height: 50px;
+     left: 0;
+   }
+ }

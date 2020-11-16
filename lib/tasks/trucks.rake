@@ -14,6 +14,7 @@ namespace :db do
       street_address    = Faker::Address.street_address
       country           = "France"
       description       = Faker::Restaurant.description
+      image             = "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
       saved             = 0
 
       Truck.create!(name: name,
@@ -23,6 +24,7 @@ namespace :db do
                     street_address: street_address,
                     country: country,
                     description: description,
+                    image: image,
                     saved: saved)
     end
   end
