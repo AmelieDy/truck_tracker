@@ -8,6 +8,9 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
+require("bootstrap")
+require("flatpickr")
+
 
 $(document).ready(function() {
 
@@ -15,7 +18,7 @@ $(document).ready(function() {
   $('.button-box a').on('click', function(e){
     e.preventDefault();
     // select button element
-    const selector = 'ul li.button-box a';
+    selector = 'ul li.button-box a';
     // remove and add classes
     $(selector).removeClass('btn-primary');
     $(selector).addClass('btn-outline-primary');
@@ -33,4 +36,7 @@ $(document).ready(function() {
       datatype: 'json',
     });
   });
+
+  $(".datepicker").flatpickr();
+
 });
