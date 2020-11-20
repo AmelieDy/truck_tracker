@@ -1,6 +1,6 @@
 .row
   .col-md-12
-    %h2.mt-2= "#{trucks.size} Trucks disponibles"
+    %h2.mt-2= "#{trucks.total_count} Trucks disponibles"
     .row
       - trucks.each do |truck|
         .col-md-6.col-lg-3
