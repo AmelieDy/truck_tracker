@@ -20,8 +20,8 @@
       %h2.mt-4 De quoi avez-vous envie ?
       %ul
         - @categories.count.each do |cat, count|
-          %li.button-box
-            = link_to "#{cat} #{count}",'#',"data-turbolinks": "false", class:'mt-2 btn btn-outline-primary button-box', 'data-category': cat
+          %li.button-box-li
+            = link_to "#{cat} #{count}",'#', class:'mt-2 btn btn-outline-primary button-box', 'data-category': cat
 
 
   -# return list of available trucks

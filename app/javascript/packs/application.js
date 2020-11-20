@@ -16,12 +16,12 @@ window.Swal = Swal;
 
 
 $(document).ready(function() {
-
   // function to get trucks with category params
-  $('.button-box a').on('click', function(e){
+
+  $(document).on('click', '.button-box', function(e){
     e.preventDefault();
     // decalre varaibles
-    var selector = 'ul li.button-box a';
+    var selector = '.button-box';
     var category = $(this).data('category');
 
     // remove and add classes
@@ -42,8 +42,8 @@ $(document).ready(function() {
     });
   });
 
-
-  $('.book-button-available').on('click', function(){
+  // $(".book-button").on("click",".book-button-available", function(){
+  $(document).on("click",".book-button-available", function(){
     var id = $(this).data('truck-id');
     Swal.fire({
       title: 'Confirmation de la réservation',

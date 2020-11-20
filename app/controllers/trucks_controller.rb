@@ -5,10 +5,11 @@ class TrucksController < ApplicationController
     @categories = Truck.all.group(:category)
     # at the first load, load all trucks
     # if a category is selected through view, we will get xhr response
+    @trucks = Truck.all.page(params[:page]).per(10)
     if request.xhr?
-      @trucks = Truck.all.where(category: params[:category])
+      @trucks = @trucks.where(category: params[:category])
     else
-      @trucks = Truck.all
+      @trucks = @trucks
     end
   end
 

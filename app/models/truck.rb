@@ -12,10 +12,7 @@ class Truck < ApplicationRecord
             :phone,
             :email, presence: true
 
-
   enum state: %i[available pending booked] #disponible, attente de confirmation, réservé
-
-
 
   # sanitize phone number and emails if blanks
   def sanitize
