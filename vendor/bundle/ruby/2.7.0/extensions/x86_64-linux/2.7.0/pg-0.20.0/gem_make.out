@@ -1,9 +1,9 @@
 current directory: /home/amelie/Documents/projects/truck_tracker/vendor/bundle/ruby/2.7.0/gems/pg-0.20.0/ext
-/home/amelie/.rbenv/versions/2.7.0/bin/ruby -I /home/amelie/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20201120-30388-zs2m92.rb extconf.rb
+/home/amelie/.rbenv/versions/2.7.0/bin/ruby -I /home/amelie/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20201120-8445-14cly5w.rb extconf.rb
 checking for pg_config... yes
 Using config values from /usr/bin/pg_config
-You need to install postgresql-server-dev-NN for building a server-side extension or libpq-dev for building a client-side application.
-You need to install postgresql-server-dev-NN for building a server-side extension or libpq-dev for building a client-side application.
+You need to install postgresql-server-dev-X.Y for building a server-side extension or libpq-dev for building a client-side application.
+You need to install postgresql-server-dev-X.Y for building a server-side extension or libpq-dev for building a client-side application.
 checking for libpq-fe.h... no
 Can't find the 'libpq-fe.h header
 *** extconf.rb failed ***

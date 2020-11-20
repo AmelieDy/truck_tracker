@@ -1,5 +1,5 @@
 current directory: /home/amelie/Documents/projects/truck_tracker/vendor/bundle/ruby/2.7.0/gems/pg-1.2.3/ext
-/home/amelie/.rbenv/versions/2.7.0/bin/ruby -I /home/amelie/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20201120-28914-1ghoswl.rb extconf.rb
+/home/amelie/.rbenv/versions/2.7.0/bin/ruby -I /home/amelie/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20201120-32485-8gdr93.rb extconf.rb
 checking for pg_config... yes
 Using config values from /usr/bin/pg_config
 You need to install postgresql-server-dev-NN for building a server-side extension or libpq-dev for building a client-side application.
