@@ -1,5 +1,4 @@
 class Truck < ApplicationRecord
-  searchkick
   before_save :sanitize
   paginates_per 8
   validates :name,
