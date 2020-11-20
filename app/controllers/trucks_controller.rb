@@ -11,4 +11,21 @@ class TrucksController < ApplicationController
       @trucks = Truck.all
     end
   end
+
+  private
+   # set permit parameters
+  def truck_params
+    params.require(:message).permit(:name,
+                                    :category,
+                                    :city,
+                                    :zip_code,
+                                    :street_address,
+                                    :country,
+                                    :description,
+                                    :image,
+                                    :saved,
+                                    :email,
+                                    :state,
+                                    :phone)
+  end
 end

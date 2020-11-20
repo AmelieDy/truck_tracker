@@ -6,7 +6,7 @@
 
 :root {
    --linear-bg: linear-gradient(to bottom left,rgba(47,47,237,0.7),rgba(47,47,237,0.9)) ;
-   --theme-color: #5050EA;
+   --theme-color: #1919ff;
  }
 
  html {
@@ -78,6 +78,10 @@
   border-color: var(--theme-color) !important;
 }
 
+.btn-pending {
+  color: #FFF !important;
+  background-color: #3299ff !important;
+}
 .card-text {
    color: #99999b;
  }

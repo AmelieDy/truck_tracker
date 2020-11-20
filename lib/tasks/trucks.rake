@@ -5,6 +5,7 @@ namespace :db do
     populate_trucks
   end
 
+  # populate fake trucks datas with Faker
   def populate_trucks
     100.times do |_n|
       name              = Faker::Restaurant.name
@@ -16,6 +17,9 @@ namespace :db do
       description       = Faker::Restaurant.description
       image             = "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
       saved             = 0
+      email             = Faker::Internet.email
+      state             = 0
+      phone             = Faker::PhoneNumber
 
       Truck.create!(name: name,
                     category: category,
@@ -25,7 +29,10 @@ namespace :db do
                     country: country,
                     description: description,
                     image: image,
-                    saved: saved)
+                    saved: saved,
+                    email: email,
+                    state: state,
+                    phone: phone)
     end
   end
 end

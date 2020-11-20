@@ -10,6 +10,9 @@ require("channels")
 require("jquery")
 require("bootstrap")
 require("flatpickr")
+import Swal from 'sweetalert2';
+
+window.Swal = Swal;
 
 
 $(document).ready(function() {
@@ -17,15 +20,17 @@ $(document).ready(function() {
   // function to get trucks with category params
   $('.button-box a').on('click', function(e){
     e.preventDefault();
-    // select button element
-    selector = 'ul li.button-box a';
+    // decalre varaibles
+    var selector = 'ul li.button-box a';
+    var category = $(this).data('category');
+
     // remove and add classes
     $(selector).removeClass('btn-primary');
     $(selector).addClass('btn-outline-primary');
     $(this).addClass('btn-primary');
     $(this).removeClass('btn-outline-primary');
+
     // set category variable
-    category = $(this).data('category');
     // get trucks in trucks controller index in ajax
     $.ajax({
       type: 'GET',
@@ -37,6 +42,37 @@ $(document).ready(function() {
     });
   });
 
+
+  $('.book-button-available').on('click', function(){
+    var id = $(this).data('truck-id');
+    Swal.fire({
+      title: 'Confirmation de la réservation',
+      showCancelButton: true,
+      confirmButtonColor: '#1919ff',
+      confirmButtonText: 'Je réserve !',
+      cancelButtonText: 'Annuler'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        $.ajax({
+          type: 'GET',
+          url: '/messages/new',
+          data: {
+            'id': id
+          },
+          datatype: 'json',
+          success: function() {
+            Swal.fire(
+              'Mail envoyé',
+              'Un mail a été envoyé pour la réservation, vous devriez recevoir une confirmation sous 24h',
+              'success'
+            )
+          }
+        });
+      }
+    })
+  });
+
+  // set datepicker
   $(".datepicker").flatpickr();
 
 });

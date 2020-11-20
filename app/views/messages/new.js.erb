@@ -1,0 +1,3 @@
+// Render new button
+$("#book-button-<%= @truck.id %>").empty();
+$("#book-button-<%= @truck.id %>").append("<%= j render(:partial => 'trucks/book_button', :locals => {truck: @truck}) %>");
