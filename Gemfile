@@ -36,6 +36,8 @@ gem 'searchkick'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# populate fake datas
+gem 'faker'
 
 group :production do
   gem 'pg', '~> 0.20.0'
@@ -47,8 +49,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use mysql as the database for Active Record
   gem 'mysql2'
-  # populate fake datas
-  gem 'faker'
   # generate random image
   gem 'image_suckr'
 end
